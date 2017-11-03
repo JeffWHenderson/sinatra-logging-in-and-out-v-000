@@ -12,7 +12,7 @@ class ApplicationController < Sinatra::Base
 
   post '/login' do
     user = User.find_by(params)
-                      #should I create a user here, then I should save and get its ID from the table
+    session[:id] = user.id            
     params[:username] #set equal to session ID
     params[:password] #encrypt password
     redirect :index   # displays the correct balance based on session[:user_id]
