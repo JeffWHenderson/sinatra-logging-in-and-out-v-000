@@ -11,10 +11,10 @@ class ApplicationController < Sinatra::Base
   end
 
   post '/login' do
-    #should I create a user here, then I should save and get its ID from the table
-    params[:username]  #set equal to session ID
-    params[:password]  #encrypt password
-    redirect :index    # displays the correct balance based on session[:user_id]
+                      #should I create a user here, then I should save and get its ID from the table
+    params[:username] #set equal to session ID
+    params[:password] #encrypt password
+    redirect :index   # displays the correct balance based on session[:user_id]
   end                 # display logout
                       #shows the error page if username and ID do not match available users
   get '/account' do
