@@ -14,7 +14,7 @@ class ApplicationController < Sinatra::Base
     user = User.find_by(params)
     if user
       session[:user_id] = user.id
-      redirect :'/account'   
+      redirect :'/account'
     else
       erb :'error'
     end             #shows the error page if username and ID do not match available users
