@@ -18,7 +18,8 @@ class ApplicationController < Sinatra::Base
   end                 # display logout
                       #shows the error page if username and ID do not match available users
   get '/account' do
-
+        # shows the error page if user goes directly to /account
+        # displays the account information if a user is logged in
   end
 
   get '/logout' do
