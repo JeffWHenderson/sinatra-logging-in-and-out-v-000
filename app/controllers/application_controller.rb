@@ -11,7 +11,7 @@ class ApplicationController < Sinatra::Base
   end
 
   post '/login' do
-    #params[:username]
+    session[:user_id] = params[:username]
     #params[:password]
     redirect :index
   end
