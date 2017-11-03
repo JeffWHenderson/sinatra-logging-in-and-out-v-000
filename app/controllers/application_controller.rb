@@ -17,7 +17,7 @@ class ApplicationController < Sinatra::Base
       redirect :'/account'
     else
       erb :'error'
-    end             #shows the error page if username and ID do not match available users
+    end       
   end
 
   get '/account' do
@@ -35,6 +35,4 @@ class ApplicationController < Sinatra::Base
     session.clear
     redirect :'/'
   end
-
-
 end
