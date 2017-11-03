@@ -12,6 +12,7 @@ class ApplicationController < Sinatra::Base
 
   post '/login' do
     params[:username]
+    params[:password]
     #redirect :index
   end
 
