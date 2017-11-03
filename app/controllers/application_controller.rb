@@ -12,7 +12,7 @@ class ApplicationController < Sinatra::Base
 
   post '/login' do
     user = User.find_by(params)     #set equal to session ID
-    session[:id] = user.id          #encrypt password 
+    session[:user_id] = user.id          #encrypt password
     #params[:username]               # displays the correct balance based on session[:user_id]
     #params[:password]               # display logout
     redirect :index                 #shows the error page if username and ID do not match available users
