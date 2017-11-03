@@ -12,6 +12,7 @@ class ApplicationController < Sinatra::Base
 
   post '/login' do
     user = User.find_by(params)
+    if user
     session[:user_id] = user.id
     #params[:username]               # displays the correct balance based on session[:user_id]
     #params[:password]               # display logout
