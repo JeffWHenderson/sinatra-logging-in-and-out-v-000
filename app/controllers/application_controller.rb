@@ -15,7 +15,7 @@ class ApplicationController < Sinatra::Base
     params[:username]  #set equal to session ID
     params[:password]  #encrypt password
     redirect :index    # displays the correct balance based on session[:user_id]
-  end
+  end                 # display logout
 
   get '/account' do
 
