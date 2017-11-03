@@ -13,10 +13,11 @@ class ApplicationController < Sinatra::Base
   post '/login' do
     user = User.find_by(params)
     if user
-    session[:user_id] = user.id
-    #params[:username]               # displays the correct balance based on session[:user_id]
-    #params[:password]               # display logout
-    redirect :'/account'                #shows the error page if username and ID do not match available users
+      session[:user_id] = user.id
+      redirect :'/account'   
+    else
+      erb :'error'
+    end             #shows the error page if username and ID do not match available users
   end
 
   get '/account' do
