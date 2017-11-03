@@ -21,6 +21,7 @@ class ApplicationController < Sinatra::Base
   get '/account' do
         # shows the error page if user goes directly to /account
         # displays the account information if a user is logged in
+    erb :'account'
   end
 
   get '/logout' do
