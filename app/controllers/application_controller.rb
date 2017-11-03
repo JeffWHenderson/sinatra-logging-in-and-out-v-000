@@ -11,6 +11,7 @@ class ApplicationController < Sinatra::Base
   end
 
   post '/login' do
+    user = User.find_by(params)
                       #should I create a user here, then I should save and get its ID from the table
     params[:username] #set equal to session ID
     params[:password] #encrypt password
