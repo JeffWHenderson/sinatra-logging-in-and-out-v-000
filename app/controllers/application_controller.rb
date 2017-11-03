@@ -11,8 +11,9 @@ class ApplicationController < Sinatra::Base
   end
 
   post '/login' do
-    session[:user_id] = params[:username]
-    #params[:password]
+    #should I create a user here, then I should save and get its ID from the table
+    params[:username]
+    params[:password]
     redirect :index
   end
 
