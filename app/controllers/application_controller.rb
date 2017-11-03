@@ -16,7 +16,7 @@ class ApplicationController < Sinatra::Base
     params[:password]  #encrypt password
     redirect :index    # displays the correct balance based on session[:user_id]
   end                 # display logout
-
+                      #shows the error page if username and ID do not match available users
   get '/account' do
 
   end
